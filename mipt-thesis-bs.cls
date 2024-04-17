@@ -31,7 +31,7 @@
 
 %%%%% Set up correct formatting %%%%%
 \geometry{left=3cm}
-\geometry{right=2cm}
+\geometry{right=1.5cm}
 \geometry{top=2cm}
 \geometry{bottom=2cm}
 \onehalfspace
