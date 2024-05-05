@@ -1,0 +1,148 @@
+\documentclass[a4paper]{article}
+\usepackage[12pt]{extsizes} % для того чтобы задать нестандартный 14-ый размер шри
+\usepackage[left=20mm, top=15mm, right=15mm, bottom=15mm, nohead, footskip=30mm]{geometry} % настройки полей документа
+\usepackage{wrapfig}
+\usepackage{placeins} 
+\usepackage[T1,TS1, T2A]{fontenc} % Cyrillic fonts
+\usepackage{hyperref}
+\usepackage[warn]{mathtext}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb, amsmath, multicol}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[shortcuts,cyremdash]{extdash}
+\usepackage{wrapfig}
+\usepackage{floatflt}
+\usepackage{lipsum}
+
+\usepackage{euler}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\usepackage{subfiles}
+\usepackage{enumitem}
+\usepackage{amsthm}
+\usepackage{import}
+\graphicspath{}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{graphicx}
+
+\usepackage{autonum}
+\DeclareMathOperator{\sign}{sign}
+
+
+\newcommand{\image}[3]
+{
+	\begin{figure}[h]
+		\center{\includegraphics[scale=#2]{#1}}
+		\caption{#3}
+	\end{figure}
+}
+\newcommand{\eq}{\begin{equation}}
+\newcommand{\qe}{\end{equation}}
+\renewcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\renewcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\renewcommand{\arctan}{\mathop{\mathrm{arctg}}\nolimits}
+\newcommand{\divisible}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\grad}[1]{\mathop{\mathrm{grad}}\nolimits{#1}}
+\newcommand{\diver}[1]{\mathop{\mathrm{div}}\nolimits{\vec{#1}}}
+\newcommand{\rot}[1]{\mathop{\mathrm{rot}}\nolimits{\vec{#1}}}
+\newcommand{\veci}{{\vec\imath}}                % i-орт
+\newcommand{\vecj}{{\vec\jmath}}                % j-орт
+\newcommand{\veck}{{\vec{k}}}                   % k-орт
+\renewcommand{\phi}{\varphi}                    % Красивая фи
+\newcommand{\dpart}[2]{\frac{\partial #1}{\partial #2}} % first partial der
+\newcommand{\ddpart}[2]{\frac{\partial^2 #1}{\partial #2^2}} % вторая частная производная
+\newcommand{\e}{\mathop{\mathrm e}\nolimits}    % Экспонента
+\newcommand{\E}{\mathcal{E}}                    % ЭДС
+\renewcommand{\epsilon}{\varepsilon}            % Красивый эпсилон
+\newcommand{\degr}{\ensuremath{^\circ}}         % Градус
+\newcommand{\const}{\ensuremath{\mathfrak{const}}} % постоянная
+\renewcommand{\C}{\ensuremath{\mathfrak{C}}}    % Постоянная интегрирования
+\newcommand{\Int}{\int\limits}          % Большой интеграл (можно поменять \int на \varint)
+\newcommand{\IInt}{\iint\limits}          % Большой интеграл (можно поменять \int на \varint)
+\newcommand{\Oint}{\oint\limits}                % Большой интеграл
+\newcommand{\lvec}[1]{\overrightarrow{#1}}            % beauty vector arrow
+\newcommand{\quot}[1]{<<#1>>}                   % russian quotes
+\newcommand{\iu}{\imath}
+\newcommand{\system}[1]{\left\lbrace\begin{array}{c} #1 \end{array} \right.}
+\newcommand{\cvec}[1]{\left[\begin{array}{c} #1 \end{array} \right]}
+\newcommand{\matr}[2]{\left(\begin{array}{#1} #2 \end{array} \right)}
+\newcommand{\matrtwo}[1]{\matr{c c}{#1}}
+\newcommand{\matrthree}[1]{\matr{c c c}{#1}}
+\newcommand{\detmat}[2]{\left|\begin{array}{#1} #2 \end{array} \right|}
+\newcommand{\dettwo}[1]{\detmat{c c}{#1}}
+\newcommand{\detthree}[1]{\detmat{c c c}{#1}}
+
+\newcommand{\antip}{\uparrow\downarrow}
+
+\newcommand{\when}[2]{\settowidth{\myflt}{\scriptsize $#2$}% Верт. линия с нижним индексом
+	\ensuremath{\left.{#1}\right|_{#2}\hspace{-\myflt}\,}}
+%\renewcommand{\kappa}{\varkappa}
+%\newcommand{\}{def}
+\RequirePackage{caption2}
+%\renewcommand\captionlabeldelim{}
+% Цвета для гиперссылок
+\definecolor{linkcolor}{HTML}{0000FF} % цвет ссылок
+\definecolor{urlcolor}{HTML}{799B03} % цвет гиперссылок
+
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+\begin{document}% начало документа
+% НАЧАЛО ТИТУЛЬНОГО ЛИСТА
+\begin{center}
+	\hfill \break
+	\hfill \break
+	{\small Moscow Institute of Physics and Technology}\\
+	\hfill \break
+	\hfill \break
+	\hfill \break
+	\hfill \break
+	\hfill \break
+	\normalsize{Bachelor Thesis Proposal}\\
+	\hfill \break
+	\hfill \break
+	\hfill \break
+	\hfill \break
+	\hfill \break
+	\hfill \break
+	\hfill \break
+	\hfill \break
+	\hfill \break
+	\hfill \break
+	\large{Research and development of an analysis and warning system to improve the performance of source code in a high-level programming language
+	}\\
+\end{center}
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+\hfill \break
+
+
+\begin{flushright}
+	\normalsize{Student of group B01-008}\\
+	\normalsize{\textbf{Lirisman K.}}\\
+	\normalsize{Supervisor}\\
+	\normalsize{\textbf{Gavrin E.}}\\
+	\hfill \break
+	\hfill \break
+\end{flushright}
+
+\begin{center}
+	\normalsize{\textbf{Dolgoprudny, 2024}}
+\end{center}
+
+
+\thispagestyle{empty} % выключаем отображение номера для этой страницы
+
+% КОНЕЦ ТИТУЛЬНОГО ЛИСТА
+
+\newpage
+
+	\import{src.tex}
+
+
+\end{document}

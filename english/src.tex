@@ -1,0 +1,43 @@
+\section{Motivation & Problem Statement}
+
+In modern programming, high-level programming languages are particularly
+significant, as they allow developers to focus on application
+logic rather than memory management details or other low-level
+tasks. However, such languages often encounter performance issues,
+especially in the context of large and complex projects. This compels
+people to create new high-level programming languages.
+
+In this work, we are exploring a new programming language that is actively
+developing as a fast alternative to the widely used TypeScript.
+The main goal of developing this language is to create an extended
+and more performant version of TypeScript. It is important to maintain
+compatibility with TypeScript to facilitate the transition of existing
+projects and the training of new developers.
+
+\textbf{ }
+\section{Aim of the work}
+The goal of this Bachelor thesis is to develop a code analysis and warning system for the
+selected high-level programming language to enhance its performance and speed
+up the execution of applications written in it. Additionally, to
+implement a system analogous to Clang Tidy for selectively disabling
+selected checks directly in the source code.
+
+
+\textbf{ }
+\textbf{Research Tasks:}
+
+\begin{enumerate}
+    \item Study of existing solutions.
+    \item Development of a code analysis system at the compilation stage.
+    \item Analysis of the current specification of the target programming language for potentially slow language constructs and functionality, data collection for further testing.
+    \item Provide a correction option that speeds up the application, correct from the perspective of the selected programming language, for each language unit among the proposed ones.
+    \item Test each proposal: measure the application's performance before and after the proposed corrections.
+    \item Implement the corresponding verification in the analysis system after confirming positive test results.
+    \item Develop a system for selectively and collectively disabling checks selected by the developer, supporting the most popular usage scenarios based on data obtained from studying existing solutions.
+    \item Support the ability to analyze in a multi-file build system.
+\end{enumerate}
+
+The research objectives are considered achieved when at least five proposals are identified and implemented,
+speeding up the application by an average of at least 5\%. Additionally, the development
+of a check disabling system, successful support of project build, and passing testing
+consisting of some potential scenarios of applying the proposed solutions are required.
