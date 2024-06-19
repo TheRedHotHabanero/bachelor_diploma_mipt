@@ -7,7 +7,7 @@
 }
 \ProcessOptions\relax
 
-\LoadClass[a4paper,12pt]{extbook}
+\LoadClass[a4paper,12pt,oneside]{extbook}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% Useful packages %%%%%
